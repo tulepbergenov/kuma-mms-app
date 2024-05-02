@@ -1,11 +1,10 @@
-import { HelloWorld } from "@/components/HelloWorld";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <HelloWorld />
+      <Text>Hello World</Text>
       <StatusBar style="auto" />
     </View>
   );
