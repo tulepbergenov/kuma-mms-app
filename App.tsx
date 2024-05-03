@@ -1,20 +1,37 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Providers } from "@/app/providers";
+import { baseStyles } from "@/app/styles";
+import { Button } from "@/shared/ui-kit";
+import { Text, TextInput, View } from "react-native";
 
-export default function App() {
+const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Providers>
+      <View
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100%",
+          width: "100%",
+        }}
+      >
+        <View style={baseStyles.container}>
+          <Text>Kuma</Text>
+          <View
+            style={{
+              marginBottom: 5,
+            }}
+          >
+            <View>
+              <TextInput />
+              <TextInput />
+            </View>
+            <Button title="Войти" />
+          </View>
+          <Button title="Восстановить пароль" />
+        </View>
+      </View>
+    </Providers>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+export default App;
